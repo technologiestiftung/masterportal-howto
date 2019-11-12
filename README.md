@@ -7,9 +7,11 @@ Download the example boilerplate [here](https://bitbucket.org/geowerkstatt-hambu
 ## 2. Using external services
 If you are trying to use wfs/wms/wmts services from another domain, due to cross-origin problems, you will run into problems. The masterportal has its own proxy services. But its a bit tricky to setup depending on the server you are running this on. Therefore, we have created a simple php proxy solution. Get the proxy.php and the .htaccess file from the [repository](https://github.com/technologiestiftung/masterportal-proxy). You don't need to touch the proxy.php, but the .httaccess needs a little modifying. The masterportal translates external urls to proxy requests, e.g *fbinter.stadt-berlin.de* would be translated to *fbinter_stadt-berlin_de*. Therefore, you need to add all external URLs to the .htacces, here is an example:
 
-```RewriteEngine On
+```
+RewriteEngine On
 RewriteRule ^fbinter_stadt-berlin_de/(.*)$ /proxy.php?domain=fbinter.stadt-berlin.de&uri=$1 [P,QSA]
-RewriteRule ^example-domain_de/(.*)$ /proxy.php?domain=example-domain.de&uri=$1 [P,QSA]```
+RewriteRule ^example-domain_de/(.*)$ /proxy.php?domain=example-domain.de&uri=$1 [P,QSA]
+```
 
 If you just need a basic instance, you are done now. If you need further modifications, read on...
 
