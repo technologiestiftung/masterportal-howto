@@ -19,7 +19,7 @@ If you just need a basic instance, you are done now. If you need further modific
 If you need a custom module, like our module for the [soziale Einrichtungen](https://github.com/technologiestiftung/masterportal-module-sozialeEinrichtungen), please create a new repository, named "masterportal-module-NAMEofMODULE". Develop the module in there. In order to use your module, you need to build a custom version of the masterportal (see next step).
 
 ## 4. Build a custom version of the masterportal
-Clone the official [masterportal repository](https://bitbucket.org/geowerkstatt-hamburg/masterportal/src/stable/) on GitHub, make sure you choose the stable branch. Install dependencies `npm install`. In order to test/build your module, you can build a new version of the masterportal by referencing your custom module folder: `npm start -- --CUSTOMMODULE "../MODULE_FOLDER/MODULE"`. Copy the generated files from the *dist* folder to your instance. Done.
+Clone the official [masterportal repository](https://bitbucket.org/geowerkstatt-hamburg/masterportal/src/stable/) on GitHub, make sure you choose the stable branch. Install dependencies `npm install`. In order to test/build your module, you can build a new version of the masterportal by referencing your custom module folder: `npm start/build -- --CUSTOMMODULE "../MODULE_FOLDER/MODULE"`. If you have multiple custom modules, better use *buildPortalsFromPortalconfigs* portalconfig JSON files (see masterportal dev-documentation). Copy the generated files from the *dist* folder to your instance. Done.
 
 ## 5. Documentation
 There is lots of good [documentation](https://bitbucket.org/geowerkstatt-hamburg/masterportal/src/stable/) on the masterportal for the instance as well as module part.
