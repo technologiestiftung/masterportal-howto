@@ -9,7 +9,9 @@ If you are trying to use wfs/wms/wmts services from another domain, due to cross
 
 ``
 RewriteEngine On
+
 RewriteRule ^fbinter_stadt-berlin_de/(.*)$ /proxy.php?domain=fbinter.stadt-berlin.de&uri=$1 [P,QSA]
+
 RewriteRule ^example-domain_de/(.*)$ /proxy.php?domain=example-domain.de&uri=$1 [P,QSA]
 ``
 
